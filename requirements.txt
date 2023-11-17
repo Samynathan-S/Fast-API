@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+strawberry-graphql[fast-api]
+strawberry-graphql[debug-server]
+psycopg2
+sqlalchemy
+psycopg2-binary
+asyncpg
+alembic
