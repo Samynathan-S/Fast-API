@@ -24,7 +24,7 @@ class User(Base):
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
 
-class Event(Base):
+class EmsEventModule(Base):
     __tablename__ = "events"  
     __table_args__ = {"schema": "event_management"}  
 
@@ -41,3 +41,15 @@ class Event(Base):
     meeting_link = Column(String, nullable=False)
     event_location_id = Column(Integer , nullable=False)
     event_status = Column(String, nullable=False)
+
+
+class EmsUserModule(Base):
+    __tablename__ = "usertable"  
+    __table_args__ = {"schema": "event_management"}  
+
+    first_name = Column(String, nullable=False)
+    last_name = Column(String, nullable=False)
+    user_role = Column(String, nullable=False)
+    user_id = Column(Integer, primary_key=True, index=True)
+    email_id = Column(String, nullable=False)
+    image= Column(String, nullable=True)
